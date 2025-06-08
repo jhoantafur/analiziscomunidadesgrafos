@@ -6,7 +6,7 @@ from pyvis.network import Network
 import streamlit.components.v1 as components
 import plotly.graph_objects as go
 
-#  Configuración de la Página y Estilo
+# Configuración de la Página y Estilo
 st.set_page_config(
     page_title="Análisis Temático de Redes Sociales", page_icon="✨", layout="wide"
 )
@@ -35,7 +35,7 @@ div[data-testid="metric-container"] {
 )
 
 
-#  Funciones de Carga y Procesamiento
+# Funciones de Carga y Procesamiento
 @st.cache_data
 def load_and_prepare_data(file_path):
     """Carga los datos y realiza la preparación inicial una sola vez."""
@@ -76,7 +76,7 @@ def build_graph(df_selection):
     return G
 
 
-#  Carga de Datos Principal
+# Carga de Datos Principal
 df_original = load_and_prepare_data("data/datos_finales_analisis.csv")
 
 # Nombres de los tópicos para usar en todo el dashboard
@@ -91,7 +91,7 @@ nombres_topicos = {
 }
 
 
-#  NAVEGACIÓN PRINCIPAL EN LA BARRA LATERAL
+# NAVEGACIÓN PRINCIPAL EN LA BARRA LATERAL
 st.sidebar.title("Navegación del Proyecto")
 page = st.sidebar.radio(
     "Selecciona una página:", ["Página Principal", "Dashboard de Análisis"]
